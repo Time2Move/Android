@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -20,4 +21,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "BeUpToU"
-include(":app")
+include(
+    ":app",
+    ":feature:signin",
+    ":feature:signin-api"
+)
