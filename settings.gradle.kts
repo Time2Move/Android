@@ -24,5 +24,5 @@ rootProject.name = "BeUpToU"
 include(
     ":app",
     ":feature:signin",
-    ":feature:signin-api"
+    ":feature:signin-api",
 )
