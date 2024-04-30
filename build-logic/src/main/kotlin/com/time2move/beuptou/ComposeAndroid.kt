@@ -29,7 +29,7 @@ internal fun Project.configureComposeAndroid() {
             "debugImplementation"(findLibrary("androidx.ui.tooling").get())
             "implementation"(findLibrary("androidx.ui.tooling.preview").get())
             "implementation"(findLibrary("androidx.material3").get())
-            "debugImplementation"(findLibrary("androidx.ui.test.manifest"))
+            "debugImplementation"(findLibrary("androidx.ui.test.manifest").get())
         }
     }
 }
