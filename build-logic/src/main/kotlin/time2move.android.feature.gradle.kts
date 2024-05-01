@@ -16,7 +16,7 @@ configureHiltAndroid()
 
 dependencies {
     with(project.extensions.libs) {
-//    implementation(project(""))
+        implementation(project(":core:designsystem"))
         implementation(findLibrary("hilt.navigation.compose").get())
         implementation(findLibrary("androidx.compose.navigation").get())
         androidTestImplementation(findLibrary("androidx.compose.navigation.test").get())

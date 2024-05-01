@@ -23,6 +23,9 @@ dependencyResolutionManagement {
 rootProject.name = "BeUpToU"
 include(
     ":app",
+
+    ":core:designsystem",
+
     ":feature:signin",
     ":feature:signin-api",
 )
