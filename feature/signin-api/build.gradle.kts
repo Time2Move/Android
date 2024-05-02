@@ -1,6 +1,5 @@
 plugins {
-    id("time2move.android.library-no-hilt")
-    id("time2move.android.compose")
+    id("time2move.android.feature-api")
 }
 
 android {

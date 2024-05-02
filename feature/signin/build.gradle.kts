@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.time2move.beuptou.feature.signin"
 }
+
+dependencies {
+    implementation(projects.feature.signinApi)
+}

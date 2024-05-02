@@ -26,6 +26,7 @@ include(
 
     ":core:designsystem",
 
+    ":feature:main-nav",
     ":feature:signin",
     ":feature:signin-api",
 )

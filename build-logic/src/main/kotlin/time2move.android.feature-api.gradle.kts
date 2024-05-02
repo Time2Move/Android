@@ -13,6 +13,7 @@ android {
 
 dependencies {
     with(project.extensions.libs) {
+        implementation(project(":feature:main-nav"))
         implementation(findLibrary("androidx.compose.navigation").get())
         androidTestImplementation(findLibrary("androidx.compose.navigation.test").get())
     }
