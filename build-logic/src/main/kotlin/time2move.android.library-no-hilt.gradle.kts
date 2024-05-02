@@ -1,5 +1,4 @@
 import com.time2move.beuptou.configureCoroutineAndroid
-import com.time2move.beuptou.configureHiltAndroid
 import com.time2move.beuptou.configureKotest
 import com.time2move.beuptou.configureKotlinAndroid
 
@@ -10,4 +9,3 @@ plugins {
 configureKotlinAndroid()
 configureKotest()
 configureCoroutineAndroid()
-configureHiltAndroid()

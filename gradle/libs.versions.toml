@@ -19,6 +19,8 @@ androidxComposeNavigation = "2.7.7"
 hilt = "2.51.1"
 hiltNavigationCompose = "1.2.0"
 
+coroutine = "1.8.0"
+
 [libraries]
 tools-build-gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
@@ -51,6 +53,10 @@ androidx-compose-navigation = { group = "androidx.navigation", name = "navigatio
 androidx-compose-navigation-test = { group = "androidx.navigation", name = "navigation-testing", version.ref = "androidxComposeNavigation" }
 androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
 androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutine" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
