@@ -29,4 +29,6 @@ include(
     ":feature:main-nav",
     ":feature:signin",
     ":feature:signin-api",
+    ":feature:mycar",
+    ":feature:mycar-api",
 )
