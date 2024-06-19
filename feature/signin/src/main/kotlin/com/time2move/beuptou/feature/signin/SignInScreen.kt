@@ -12,10 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -31,8 +28,11 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.time2move.beuptou.core.designsystem.theme.BeUpToUTheme
-import com.time2move.beuptou.core.designsystem.theme.LocalBackgroundTheme
+import com.time2move.beuptou.core.designsystem.theme.LocalColorScheme
+import com.time2move.beuptou.core.designsystem.theme.component.MainLogo
+import com.time2move.beuptou.feature.signin.component.SignInUpButtons
 
 @Composable
 internal fun SignInScreen(
@@ -42,30 +42,27 @@ internal fun SignInScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = LocalBackgroundTheme.current.color),
+            .background(color = LocalColorScheme.current.mainBlue),
     ) {
         Column(modifier = Modifier.align(Alignment.Center)) {
-            Surface(
-                shape = CircleShape,
+            MainLogo(
                 modifier = Modifier
-                    .size(80.dp)
-                    .align(Alignment.CenterHorizontally),
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Gray),
-                )
-            }
+                    .align(Alignment.CenterHorizontally)
+                    .padding(bottom = 12.dp)
+                    .size(100.dp)
+            )
 
             Text(
-                text = "언카에 로그인하여\n주차시간을 관리하세요!",
+                text = "비엇슈에 로그인하여\n주차시간을 관리하세요!",
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
                     .padding(bottom = 40.dp),
                 textAlign = TextAlign.Center,
+                style = BeUpToUTheme.typography.bold,
+                fontSize = 18.sp,
             )
 
+            Spacer(modifier = Modifier.height(86.dp))
             AnimatedVisibility(visible = isSignInButtonClicked.not()) {
                 SignInUpButtons { onClickSignInButton() }
             }
@@ -74,22 +71,6 @@ internal fun SignInScreen(
                 InputTextFields()
             }
         }
-    }
-}
-
-@Composable
-internal fun SignInUpButtons(
-    onClickSignInButton: () -> Unit,
-) {
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Button(
-            onClick = { onClickSignInButton() },
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-        ) {
-            Text(text = "로그인하기")
-        }
-
-        Text(text = "회원가입", modifier = Modifier.align(Alignment.CenterHorizontally))
     }
 }
 
