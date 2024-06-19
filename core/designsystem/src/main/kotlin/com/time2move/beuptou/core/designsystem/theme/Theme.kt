@@ -23,9 +23,16 @@ fun BeUpToUTheme(
     val colorScheme = LightDefaultColorScheme
     CompositionLocalProvider(
         LocalBackgroundTheme provides defaultBackgroundTheme,
+        LocalTypography provides Typography,
     ) {
         MaterialTheme(
             content = content,
         )
     }
+}
+
+object BeUpToUTheme {
+    val typography: BeUpToUTypography
+        @Composable
+        get() = LocalTypography.current
 }
