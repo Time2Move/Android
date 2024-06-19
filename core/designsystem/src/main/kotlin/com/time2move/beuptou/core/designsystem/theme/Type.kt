@@ -7,15 +7,14 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import com.time2move.beuptou.core.designsystem.R
-import com.time2move.beuptou.core.designsystem.theme.Typography
 
 private val PretendardFontFamily = FontFamily(
-    Font(R.font.pretendard_variable, FontWeight.Normal),
-    Font(R.font.pretendard_variable, FontWeight.Bold),
-    Font(R.font.pretendard_variable, FontWeight.ExtraBold),
-    Font(R.font.pretendard_variable, FontWeight.SemiBold),
-    Font(R.font.pretendard_variable, FontWeight.Black),
-    Font(R.font.pretendard_variable, FontWeight.Medium),
+    Font(R.font.pretendard_regular, FontWeight.Normal),
+    Font(R.font.pretendard_bold, FontWeight.Bold),
+    Font(R.font.pretendard_extra_bold, FontWeight.ExtraBold),
+    Font(R.font.pretendard_semi_bold, FontWeight.SemiBold),
+    Font(R.font.pretendard_black, FontWeight.Black),
+    Font(R.font.pretendard_medium, FontWeight.Medium),
 )
 
 private val PretendardNormalStyle = TextStyle(
