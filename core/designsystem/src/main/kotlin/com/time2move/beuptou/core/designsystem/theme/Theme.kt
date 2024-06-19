@@ -24,6 +24,7 @@ fun BeUpToUTheme(
     CompositionLocalProvider(
         LocalBackgroundTheme provides defaultBackgroundTheme,
         LocalTypography provides Typography,
+        LocalColorScheme provides ColorScheme,
     ) {
         MaterialTheme(
             content = content,
@@ -32,7 +33,19 @@ fun BeUpToUTheme(
 }
 
 object BeUpToUTheme {
+    /**
+     * @property normal 기본 폰트 스타일을 정의 (weight: 400)
+     * @property bold 굵은 폰트 스타일을 정의 (weight: 700)
+     * @property extraBold 매우 굵은 폰트 스타일을 정의 (weight: 800)
+     * @property semiBold 반굵은 폰트 스타일을 정의 (weight: 600)
+     * @property black 검정 폰트 스타일을 정의 (weight: 900)
+     * @property medium 중간 굵기 폰트 스타일을 정의 (weight: 500)
+     */
     val typography: BeUpToUTypography
         @Composable
         get() = LocalTypography.current
+
+    val colorScheme: BeUpToUColorScheme
+        @Composable
+        get() = LocalColorScheme.current
 }
