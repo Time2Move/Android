@@ -8,10 +8,10 @@ import androidx.compose.ui.res.vectorResource
 import com.time2move.beuptou.core.designsystem.R
 
 @Composable
-fun MainLogo(modifier: Modifier) {
+fun SubLogo(modifier: Modifier) {
     Image(
         modifier = modifier,
-        imageVector = ImageVector.vectorResource(id = R.drawable.ic_main_logo),
-        contentDescription = "main logo"
+        imageVector = ImageVector.vectorResource(id = R.drawable.ic_sub_logo),
+        contentDescription = "sub logo"
     )
 }
