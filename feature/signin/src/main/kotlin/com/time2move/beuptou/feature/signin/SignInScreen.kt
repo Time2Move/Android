@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -32,6 +33,8 @@ import androidx.compose.ui.unit.sp
 import com.time2move.beuptou.core.designsystem.theme.BeUpToUTheme
 import com.time2move.beuptou.core.designsystem.theme.LocalColorScheme
 import com.time2move.beuptou.core.designsystem.theme.component.MainLogo
+import com.time2move.beuptou.core.designsystem.theme.component.textfield.VisibilityTextField
+import com.time2move.beuptou.core.designsystem.theme.component.textfield.rememberVisibilityTextFieldState
 import com.time2move.beuptou.feature.signin.component.SignInUpButtons
 
 @Composable
@@ -77,7 +80,7 @@ internal fun SignInScreen(
 @Composable
 internal fun InputTextFields() {
     var id by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
+    val visibilityTextFieldState = rememberVisibilityTextFieldState { Text(text = "비밀번호") }
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -87,31 +90,17 @@ internal fun InputTextFields() {
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
                 .border(width = 1.dp, color = Color.Gray, shape = RoundedCornerShape(12.dp)),
+            placeholder = { Text(text = "아이디") },
             value = id,
             onValueChange = { id = it },
             shape = RoundedCornerShape(12.dp),
-            colors = TextFieldDefaults.colors(
-                focusedContainerColor = Color.Transparent,
-                unfocusedContainerColor = Color.Transparent,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-            ),
         )
-        TextField(
+        VisibilityTextField(
             modifier = Modifier
-                .align(Alignment.CenterHorizontally)
-                .border(width = 1.dp, color = Color.Gray, shape = RoundedCornerShape(12.dp)),
-            value = password,
-            onValueChange = { password = it },
-            shape = RoundedCornerShape(12.dp),
-            colors = TextFieldDefaults.colors(
-                focusedContainerColor = Color.Transparent,
-                unfocusedContainerColor = Color.Transparent,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-            ),
-            visualTransformation = PasswordVisualTransformation(),
+                .align(Alignment.CenterHorizontally),
+            visibilityTextFieldState = visibilityTextFieldState
         )
+
     }
 }
 
